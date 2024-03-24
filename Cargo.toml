@@ -1,0 +1,16 @@
+[package]
+name = "ntsc-rs-py"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "ntsc_rs_py"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.20", features = ["extension-module"] }
+numpy = "0.20"
+
+ntscrs = { git = "https://github.com/valadaptive/ntsc-rs.git" }
+image = "0.24.9"
